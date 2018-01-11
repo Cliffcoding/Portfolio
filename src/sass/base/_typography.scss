@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Third Rail';
+    src: url('../css/fonts/third_rail_-_demo-webfont.woff2') format('woff2'),
+         url('../css/fonts/third_rail_-_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  // color: $color-grey-dark;
+
+}
+
+.heading{
+
+  &__primary{
+    font-family: 'Third Rail', sans-serif;
+    // font-weight: 300;
+    color: var(--color-grey-light-2);
+    font-size: 15rem;
+  }
+  &__secondary{
+    padding-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--color-grey-light-2);
+    font-size: 3rem;
+    text-transform: uppercase;
+
+  }
+
+}
+
+.about{
+
+}

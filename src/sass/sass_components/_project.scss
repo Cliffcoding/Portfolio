@@ -1,0 +1,57 @@
+.project{
+  padding-left: 15vw;
+  position: relative;
+  z-index: 30;
+  height: 23rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  background-color: #fff;
+  border-top: 1px solid #f1f1f1;
+  cursor: pointer;
+  width: $width-project;
+
+
+
+  &--1{
+    height: 23rem;
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url(../images/macro-man-banner.jpg) no-repeat center;
+    object-fit: contain;
+    background-size: 100% 100%;
+    // background-position: center;
+
+  }
+  &::before{
+    backface-visibility: hidden;
+    overflow: hidden;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: $width-project;
+    background-color: #fff;
+    transition: all .4s cubic-bezier(0.68, 0, 0.35, 1);
+  }
+  &:hover::before{
+    overflow: hidden;
+    transform: translateX(100%);
+    width: $width-project;
+  }
+  &:hover .project__link, {
+    color: #fff;
+    padding-left: 8rem;
+  }
+  &__link{
+    position: relative;
+    z-index: 40;
+  }
+  &__link:link,
+  &__link:visited{
+  font-size: 1.4rem;
+  width: 100%;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .5s;
+  }
+}

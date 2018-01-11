@@ -1,0 +1,22 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+
+@import "layout/about";
+@import "layout/contact";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/projects";
+@import "layout/resume";
+
+@import "pages/home";
+
+@import "sass_components/bg-video";
+@import "sass_components/project";
+@import "sass_components/sidebar";
