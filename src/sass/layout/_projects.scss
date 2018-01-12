@@ -3,18 +3,5 @@
   grid-column: full-start/full-end;
   // min-height: 100vh;
   display: grid;
-
   grid-row-gap: 4rem;
-  &__heading {
-    padding: 4rem 0;
-    margin-left: 8vw;
-    font-size: 3rem;
-  }
-  &__dash {
-    height: 2px;
-    width: 5rem;
-    background-color: $color-primary;
-    display: block;
-  }
-
 }

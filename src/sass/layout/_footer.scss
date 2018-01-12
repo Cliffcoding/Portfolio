@@ -1,4 +1,5 @@
 .footer {
+  grid-column: full-start/full-end;
   min-height: 20vh;
   background-color: $color-terinary;
 }

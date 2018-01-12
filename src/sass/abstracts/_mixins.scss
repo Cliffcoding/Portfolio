@@ -1,3 +1,6 @@
-@mixin projectImage{
-
+@mixin projectImageLayout{
+  width: 100%;
+  object-fit: cover;
+  background-size: 100%;
+  background-position: 100% 65%;
 }

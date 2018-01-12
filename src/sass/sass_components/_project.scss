@@ -1,5 +1,5 @@
-.project{
-  padding-left: 15vw;
+.project {
+  padding-top: 2rem;
   position: relative;
   z-index: 30;
   height: 23rem;
@@ -9,19 +9,34 @@
   border-top: 1px solid #f1f1f1;
   cursor: pointer;
   width: $width-project;
-
-
-
-  &--1{
-    height: 23rem;
-    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url(../images/macro-man-banner.jpg) no-repeat center;
-    object-fit: contain;
-    background-size: 100% 100%;
-    // background-position: center;
+  transition: border-bottom 0 cubic-bezier(0.68, 0, 0.35, 1);
+  &__heading {
 
   }
-  &::before{
-    backface-visibility: hidden;
+  &--1 {
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/macro-man.jpg") no-repeat center;
+    @include projectImageLayout;
+  }
+
+  &--2 {
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/jello.jpg") no-repeat center;
+    @include projectImageLayout;
+  }
+
+  &--3 {
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/taparoo.jpg") no-repeat center;
+    @include projectImageLayout;
+    background-position: 100% 60%;
+  }
+
+  &--4 {
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/mirror-mirror.jpg") no-repeat center;
+    @include projectImageLayout;
+    background-position: 100% 40%;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  &::before {
     overflow: hidden;
     content: "";
     position: absolute;
@@ -30,28 +45,41 @@
     height: 100%;
     width: $width-project;
     background-color: #fff;
-    transition: all .4s cubic-bezier(0.68, 0, 0.35, 1);
+    transition: all 0.4s cubic-bezier(0.68, 0, 0.35, 1);
   }
-  &:hover::before{
+
+  &:hover {
+    box-shadow: 0.5rem 1rem 1rem rgba($color-grey-dark,.5);
+    z-index: 5000;
+    // border-bottom: 1px solid transparent;
+  }
+  &--4:hover {
+    border-bottom: 1px solid transparent;
+  }
+  &:hover::before {
     overflow: hidden;
     transform: translateX(100%);
     width: $width-project;
   }
-  &:hover .project__link, {
+
+  ,
+  &:hover .project__link {
     color: #fff;
     padding-left: 8rem;
   }
-  &__link{
+
+  &__link {
     position: relative;
     z-index: 40;
   }
+
   &__link:link,
-  &__link:visited{
-  font-size: 1.4rem;
-  width: 100%;
-  color: #333;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all .5s;
+  &__link:visited {
+    font-size: 1.4rem;
+    width: 100%;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s;
   }
 }

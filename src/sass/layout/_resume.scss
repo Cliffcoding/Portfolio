@@ -1,4 +1,20 @@
 .resume {
+  padding: 8rem 0;
   position: relative;
+  z-index: 1000;
+  border-bottom: 1px solid #f1f1f1;
+  box-shadow: 0.5rem 1rem 1rem rgba($color-grey-dark,.5);
   grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  &__heading{
+    grid-column: 1/-1;
+  }
+  &__display {
+    padding: 5rem 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 3000;
+    grid-column: center-start/ center-end;
+  }
 }

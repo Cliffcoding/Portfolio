@@ -28,9 +28,18 @@ body {
     color: var(--color-grey-light-2);
     font-size: 3rem;
     text-transform: uppercase;
-
   }
-
+  &--main {
+    font-size: 3rem;
+    padding: 4rem 0;
+    margin-left: 8vw;
+  }
+  &--dash {
+    height: 2px;
+    width: 5rem;
+    background-color: $color-primary;
+    display: block;
+  }
 }
 
 .about{
