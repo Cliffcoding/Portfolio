@@ -53,13 +53,15 @@ body {
   text-transform: uppercase; }
 
 .heading--main {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 500;
   padding: 4rem 0;
-  margin-left: 8vw; }
+  margin-left: 8vw;
+  line-height: 1.5; }
 
 .heading--dash {
-  height: 2px;
-  width: 5rem;
+  height: 3px;
+  width: 7rem;
   background-color: #04f799;
   display: block; }
 

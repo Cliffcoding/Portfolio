@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from './components/header';
 import About from './components/about';
+import Contact from './components/contact';
 import {WOW} from 'wowjs';
 
 import videoMp4 from './images/busy-people.mp4';
@@ -8,9 +9,24 @@ import videoWebm from './images/busy-people.webm';
 import socialSvg from './images/sprite.svg';
 import resumeDisplay from './images/Jason-Clifton-Resume.pdf';
 
+import {sendEmail} from './API';
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.handleEmail = this.handleEmail.bind(this);
+    this.state = {}
+  }
   componentDidMount() {
     new WOW().init();
+  }
+
+  handleEmail(data) {
+    sendEmail(data).then(response => {
+      this.setState({
+        emailStatus: response.message
+      })
+    });
   }
   render() {
     return (<div className="App">
@@ -114,25 +130,15 @@ class App extends Component {
           <object className="resume__display" data={resumeDisplay}>
             Resume</object>
         </section>
-        <section className="contact">
-          <form action="" className="contact__form">
-            <div className="form__group">
-              <input type="text" className="form__input" id="name" placeholder="Full Name" required="required" />
-                <label htmlFor="name" className="form__label">Full Name</label>
-              </div>
-              <div className="form__group">
-                <input type="email" className="form__input" id="email" placeholder="Email Address" required="required" />
-                  <label htmlFor="name" className="form__label">Email Address</label>
-                </div>
-                <textarea name="Message" id="" cols="30" rows="10" className="form__message form__input"></textarea>
-              </form>
-            </section>
-            <footer className="footer">
-              Footer Section
-            </footer>
-          </main>
+        <Contact
+          handleEmail={this.handleEmail}
+          />
+        <footer className="footer">
+          Footer Section
+        </footer>
+      </main>
 
-        </div>);
+    </div>);
   }
 }
 
