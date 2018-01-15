@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './components/header';
 import About from './components/about';
 import Contact from './components/contact';
+import Footer from './components/footer'
 import {WOW} from 'wowjs';
 
 import videoMp4 from './images/busy-people.mp4';
@@ -133,9 +134,9 @@ class App extends Component {
         <Contact
           handleEmail={this.handleEmail}
           />
-        <footer className="footer">
-          Footer Section
-        </footer>
+        <Footer
+          
+        />
       </main>
 
     </div>);

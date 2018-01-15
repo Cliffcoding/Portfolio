@@ -56,7 +56,6 @@ body {
   font-size: 4rem;
   font-weight: 500;
   padding: 4rem 0;
-  margin-left: 8vw;
   line-height: 1.5; }
 
 .heading--dash {
@@ -85,8 +84,24 @@ body {
 
 .contact {
   grid-column: full-start/full-end;
-  min-height: 60vh;
-  background-color: #04f799; }
+  min-height: 100vh;
+  background-image: linear-gradient(to right, rgba(4, 247, 153, 0.9), rgba(2, 147, 91, 0.9));
+  box-shadow: inset 0.5rem 1rem 1rem rgba(119, 119, 119, 0.5);
+  display: grid; }
+  .contact__form {
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+
+.form__group {
+  padding: 6rem 4rem; }
+
+.form__heading {
+  padding-bottom: 8rem; }
 
 .form__input {
   font-size: 1.5rem;
@@ -94,10 +109,9 @@ body {
   color: inherit;
   padding: 1.5rem 2rem;
   border-radius: 2px;
-  background-color: rgba(247, 247, 247, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 90%;
+  width: 100%;
   display: block;
   transition: all 0.3s; }
   .form__input:focus {
@@ -122,10 +136,19 @@ body {
   visibility: hidden;
   transform: translateY(-4rem); }
 
+.form__button {
+  display: inline-block;
+  text-align: center !important; }
+
 .footer {
   grid-column: full-start/full-end;
   min-height: 20vh;
-  background-color: #222022; }
+  background-color: #222022;
+  color: #04f799;
+  font-size: 1.5rem;
+  display: grid;
+  justify-items: center;
+  align-content: center; }
 
 .header {
   backface-visibility: hidden;
@@ -150,25 +173,28 @@ body {
   margin-top: 8rem;
   grid-column: full-start/full-end;
   display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-row-gap: 4rem; }
+  .projects__box {
+    grid-column: full-start/full-end; }
 
 .resume {
   padding: 8rem 0;
   position: relative;
   z-index: 1000;
   border-bottom: 1px solid #f1f1f1;
-  box-shadow: 0.5rem 1rem 1rem rgba(119, 119, 119, 0.5);
-  grid-column: full-start/full-end;
+  grid-column: center-start/center-end;
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .resume__heading {
-    grid-column: 1/-1; }
+    grid-column: 1/-1;
+    grid-column: full-start/full-end; }
   .resume__display {
     padding: 5rem 0;
     height: 100vh;
     width: 100%;
     z-index: 3000;
-    grid-column: center-start/ center-end; }
+    grid-column: full-start/ full-end; }
 
 .social__list {
   list-style: none;
@@ -176,14 +202,17 @@ body {
 
 .social__item {
   list-style: none;
-  padding: .5rem 0; }
+  padding: 0.5rem 0; }
 
 .social__icon {
   width: 2rem;
   height: 2rem;
-  transition: all .2s; }
+  transition: all 0.2s; }
   .social__icon:hover {
-    transform: translateY(-0.5rem); }
+    z-index: 5000;
+    transform: translateY(-0.5rem);
+    -webkit-filter: drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.5)); }
 
 .container {
   display: grid; }
@@ -217,6 +246,8 @@ body {
   cursor: pointer;
   width: calc(100vw - 8rem);
   transition: border-bottom 0 cubic-bezier(0.68, 0, 0.35, 1); }
+  .project__heading {
+    grid-column: center-start/center-end; }
   .project--1 {
     background: linear-gradient(rgba(34, 32, 34, 0.8), rgba(34, 32, 34, 0.8)), url("../images/macro-man.jpg") no-repeat center;
     width: 100%;

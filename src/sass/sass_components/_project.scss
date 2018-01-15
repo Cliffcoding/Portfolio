@@ -11,7 +11,7 @@
   width: $width-project;
   transition: border-bottom 0 cubic-bezier(0.68, 0, 0.35, 1);
   &__heading {
-
+    grid-column: center-start/center-end;
   }
   &--1 {
     background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/macro-man.jpg") no-repeat center;

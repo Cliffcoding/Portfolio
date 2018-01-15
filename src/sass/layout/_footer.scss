@@ -2,4 +2,12 @@
   grid-column: full-start/full-end;
   min-height: 20vh;
   background-color: $color-terinary;
+  color: $color-primary;
+  font-size: 1.5rem;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+
+  &__text {
+  }
 }
