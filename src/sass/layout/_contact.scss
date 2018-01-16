@@ -5,13 +5,16 @@
   background-image: linear-gradient(to right, rgba($color-primary, .9), rgba(darken($color-primary, 20%), .9));
   box-shadow: inset 0.5rem 1rem 1rem rgba($color-grey-dark,.5);
   display: grid;
+  align-content: center;
+
   &__form {
     // padding: 5rem;
-    width: 60%;
+    width: 70%;
     justify-self: center;
     align-self: center;
-    background-image: linear-gradient(rgba($color-white, .5), rgba($color-white, .5));
-    background-size: 100%;
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%),url("../images/contact.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
   }
@@ -20,10 +23,14 @@
 .form {
   &__group {
     padding: 6rem 4rem;
+    width: 45%;
   }
-  &__heading{
-    padding-bottom: 8rem;
+
+  &__heading {
+    padding-bottom: 4rem;
+    padding-top: 0;
   }
+
   &__input {
     font-size: 1.5rem;
     font-family: inherit;
@@ -52,22 +59,53 @@
     }
   }
 
-  &__label{
+  &__label {
     font-size: 1.2rem;
     font-weight: 700;
     margin-left: 2rem;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     display: block;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
-  &__input:placeholder-shown + &__label{
-    opacity:0;
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
   }
+
   &__button {
+    border: none;
+    color: $color-primary;
+    font-size: 2rem;
+    border-bottom: 1px solid currentColor;
+    padding-top: 2rem;
+    padding-bottom: 2px;
     display: inline-block;
-    text-align: center !important;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-.5rem);
+    }
+    &:focus {
+      outline: none;
+
+    }
   }
+
+  &__icon--send {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: .5rem;
+    fill: currentColor;
+    transition: all .4s;
+  }
+
+  &__button:hover &__icon--send {
+    margin-left: 1.5rem;
+  }
+
+
 }

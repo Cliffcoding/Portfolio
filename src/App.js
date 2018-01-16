@@ -25,8 +25,10 @@ class App extends Component {
   handleEmail(data) {
     sendEmail(data).then(response => {
       this.setState({
-        emailStatus: response.message
+        emailStatus: response.data.message
       })
+      console.log(response);
+      console.log(this.state);
     });
   }
   render() {
@@ -34,7 +36,9 @@ class App extends Component {
       <main>
         <section className="sidebar">
           <div className="sidebar__container">
-            <div className="sidebar__logo">logo</div>
+              <svg className="sidebar__logo">
+                <use xlinkHref={socialSvg + "#icon-portfolio-logo2"}></use>
+              </svg>
             <div className="sidebar__social">
               <ul className="social__list">
                 <li className="social__item">
@@ -80,22 +84,22 @@ class App extends Component {
           <nav className="navigation__nav">
             <ul className="navigation__list">
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#about" className="navigation__link">
                   <span>01</span>About Me</a>
               </li>
 
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#project" className="navigation__link">
                   <span>02</span>Projects</a>
               </li>
 
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#resume" className="navigation__link">
                   <span>03</span>Resume</a>
               </li>
 
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#contact" className="navigation__link">
                   <span>04</span>Contact me!</a>
               </li>
             </ul>
@@ -103,7 +107,7 @@ class App extends Component {
         </div>
         <Header/>
         <About/>
-        <section className="projects">
+        <section id="project" className="projects">
           <div className="project__heading heading--main">
             Projects
             <span className="heading--dash"></span>
@@ -123,7 +127,7 @@ class App extends Component {
             </div>
           </div>
         </section>
-        <section className="resume">
+        <section id="resume" className="resume">
           <div className="resume__heading heading--main">
             Resume
             <span className="heading--dash"></span>
@@ -133,9 +137,11 @@ class App extends Component {
         </section>
         <Contact
           handleEmail={this.handleEmail}
+          sendLogo={socialSvg + "#icon-paper-plane"}
+          message={this.state.emailStatus}
           />
         <Footer
-          
+
         />
       </main>
 

@@ -1,6 +1,11 @@
 .footer {
+  &__logo{
+    height: 20rem;
+    width: 20rem;
+
+  }
   grid-column: full-start/full-end;
-  min-height: 20vh;
+  min-height: 30vh;
   background-color: $color-terinary;
   color: $color-primary;
   font-size: 1.5rem;
@@ -9,5 +14,7 @@
   align-content: center;
 
   &__text {
+    // margin-top: 3rem;
+    // margin-bottom: 10rem;
   }
 }

@@ -3,7 +3,21 @@
   position: relative;
   background-color: #fff;
   z-index: 6000;
+  &__logo{
+    height: 7rem;
+    width: 7rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    // background-color: #fff;
 
+    &:hover {
+      z-index: 5000;
+      transform: translateY(-.5rem);
+      -webkit-filter:  drop-shadow(0 .5rem 1rem rgba(0,0,0,0.5));
+      filter: drop-shadow(0 .5rem 1rem rgba(0,0,0,0.5));
+      // box-shadow: 0.5rem .5rem .5rem rgba($color-grey-dark,.5);
+    }
+  }
   &__container {
     min-height: 100vh;
     background-color: #fff;

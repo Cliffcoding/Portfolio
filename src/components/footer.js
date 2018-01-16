@@ -5,6 +5,9 @@ import socialSvg from '../images/sprite.svg';
 const Footer = () => {
   return(
     <footer className="footer">
+      <svg className="footer__logo">
+        <use xlinkHref={socialSvg + "#icon-portfolio-logo2"}></use>
+      </svg>
       <p className=" footer__text">
       2018 &copy;
         Made by yours truly using <svg className="social__icon"><use xlinkHref={socialSvg + "#icon-brand2"}></use></svg> with

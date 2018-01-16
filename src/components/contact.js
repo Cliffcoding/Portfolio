@@ -15,18 +15,21 @@ class Contact extends Component {
     this.setState({
       [event.target.name]: event.target.value
     })
-    console.log(this.state);
   }
   submitEmail(event) {
     event.preventDefault();
     this.props.handleEmail(this.state);
+
   }
   render() {
     return (
-      <section className="contact">
+      <section id="contact" className="contact">
+        {this.props.message &&
+          <h2 className="contact__email--message">{this.props.message}</h2>
+        }
         <div className="contact__form">
           <div className="form__group">
-            <div className="form__heading heading--main">
+            <div className="heading--main form__heading">
               Let's chat.
             </div>
             <form onSubmit={this.submitEmail} className="form" method="post">
@@ -34,8 +37,16 @@ class Contact extends Component {
               <label htmlFor="name" className="form__label">Email Address</label>
               <input name="subject" onChange={this.updateFormState} value={this.state.subject} type="text" className="form__input" id="subject" placeholder="Subject" required="required"/>
               <label htmlFor="subject" className="form__label">Subject</label>
-              <textarea name="message" onChange={this.updateFormState} value={this.state.message} id="" cols="30" rows="10" className="form__message form__input" required="required" placeholder="Send me a message"></textarea>
-              <button type="submit" className="form__button">Submit</button>
+              <textarea name="message" onChange={this.updateFormState} value={this.state.message} id="" cols="30" rows="10" className="form__message form__input" required="required" placeholder="Message"></textarea>
+              <button type="submit" className="form__button">
+                Send
+                <span>
+                  <svg className="form__icon--send">
+                    <use xlinkHref={this.props.sendLogo} ></use>
+                  </svg>
+                </span>
+            </button>
+
             </form>
           </div>
         </div>
