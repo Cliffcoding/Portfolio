@@ -76,10 +76,49 @@
   &__link:link,
   &__link:visited {
     font-size: 1.4rem;
-    width: 100%;
     color: #333;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.5s;
+  }
+  &__active{
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    cursor: default;
+    .project::before{
+      display: none;
+    }
+    .project__link:link,
+    .project__link:visited {
+      font-size: 10rem;
+      font-family: 'Third Rail', sans-serif;
+      padding: 0;
+      color: $color-primary;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s;
+    }
+  }
+}
+.description{
+  color: $color-white;
+  margin-top: 3rem;
+  &__heading{
+    margin: 2rem;
+    font-size: 4rem;
+  }
+  &__text{
+    font-size: 2rem;
+  }
+  &__tech{
+    font-size: 3rem;
   }
 }

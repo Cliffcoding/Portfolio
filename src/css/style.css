@@ -332,11 +332,44 @@ body {
     z-index: 40; }
   .project__link:link, .project__link:visited {
     font-size: 1.4rem;
-    width: 100%;
     color: #333;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.5s; }
+  .project__active {
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    cursor: default; }
+    .project__active .project::before {
+      display: none; }
+    .project__active .project__link:link,
+    .project__active .project__link:visited {
+      font-size: 10rem;
+      font-family: 'Third Rail', sans-serif;
+      padding: 0;
+      color: #04f799;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s; }
+
+.description {
+  color: #fff;
+  margin-top: 3rem; }
+  .description__heading {
+    margin: 2rem;
+    font-size: 4rem; }
+  .description__text {
+    font-size: 2rem; }
+  .description__tech {
+    font-size: 3rem; }
 
 .sidebar {
   grid-column: sidebar-start/sidebar-end;

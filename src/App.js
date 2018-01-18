@@ -4,7 +4,8 @@ import Header from './components/header';
 import About from './components/about';
 import Project from './components/project';
 import Contact from './components/contact';
-import Footer from './components/footer'
+import Footer from './components/footer';
+import {ProjectData} from './projectData';
 import {WOW} from 'wowjs';
 
 import socialSvg from './images/sprite.svg';
@@ -41,17 +42,16 @@ class App extends Component {
             <span className="heading--dash"></span>
           </div>
           <div className="projects__box">
-            <Project name="MacroMan" projectLink="https://github.com/Cliffcoding/MacroMan" projectStyle="project--1 "/>
-
-            <Project name="Jello"
-              projectLink="https://github.com/JAMMS-g51"
-              projectStyle="project--2 "/>
-
-            <Project name="Taparoo"
-              projectLink="https://github.com/taparoo"
-              projectStyle="project--3 "/>
-
-            <Project name="MirrorMirror" projectLink="https://github.com/Cliffcoding/Capstone-Display" projectStyle="project--4 "/>
+            {ProjectData.map((project) => {
+              return(<Project
+                name={project.name}
+                projectDescription= {project.description}
+                projectLink={project.link}
+                projectStyle={project.style}
+                projectTechs={project.techUsed}
+                />
+            )
+            })}
           </div>
         </section>
         <section id="resume" className="resume">
