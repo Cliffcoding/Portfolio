@@ -18,14 +18,14 @@ body {
   &__primary{
     font-family: 'Third Rail', sans-serif;
     // font-weight: 300;
-    color: var(--color-grey-light-2);
+    color: $color-grey-light-2;
     font-size: 15rem;
   }
   &__secondary {
     padding-top: 2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    color: var(--color-grey-light-2);
+    color: $color-grey-light-2;
     font-size: 3rem;
     text-transform: uppercase;
   }

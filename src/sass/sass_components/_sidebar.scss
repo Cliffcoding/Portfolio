@@ -2,24 +2,24 @@
   grid-column: sidebar-start/sidebar-end;
   position: relative;
   background-color: #fff;
-  z-index: 6000;
-  &__logo{
+
+  &__logo {
     height: 7rem;
     width: 7rem;
     cursor: pointer;
-    transition: all 0.2s;
-    // background-color: #fff;
 
-    &:hover {
-      z-index: 5000;
+    transition:all 0.2s &:hover {
+      z-index: 6000;
       transform: translateY(-.5rem);
-      -webkit-filter:  drop-shadow(0 .5rem 1rem rgba(0,0,0,0.5));
+      -webkit-filter: drop-shadow(0 .5rem 1rem rgba(0,0,0,0.5));
       filter: drop-shadow(0 .5rem 1rem rgba(0,0,0,0.5));
       // box-shadow: 0.5rem .5rem .5rem rgba($color-grey-dark,.5);
     }
   }
+
   &__container {
     min-height: 100vh;
+    z-index: 6100;
     background-color: #fff;
     width: 8rem;
     display: flex;
@@ -35,6 +35,7 @@
     align-items: center;
     box-shadow: 0.5rem 0 1rem rgba($color-grey-dark,.5);
   }
+
   &__social {
     display: flex;
     flex-direction: column;
@@ -57,7 +58,7 @@
     opacity: 0;
     text-align: center;
     background-color: rgba(0,0,0,.5);
-    z-index: 2500;
+    z-index: 5700;
     backface-visibility: hidden;
     transition: width 0.4s cubic-bezier(0.68, 0.55, 0.265, 1.55), opacity 0.4s;
   }
@@ -126,7 +127,7 @@
     opacity: 1;
     margin-left: 8rem;
     width: calc(100vw - 8rem);
-    z-index: 5000;
+    z-index: 6000;
   }
 
   &__button {
@@ -136,11 +137,9 @@
     position: fixed;
     top: 40%;
     left: 0;
-    z-index: 6001;
+    z-index: 6101;
     text-align: center;
     cursor: pointer;
-
-
   }
 
   &__icon {
@@ -177,7 +176,7 @@
   &__button:hover &__icon::after,
   &__button:hover &__icon::before {
     background-color: $color-primary;
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   &__button:hover &__icon::before {
@@ -191,6 +190,7 @@
   &__checkbox:checked + &__button &__icon {
     background-color: transparent;
   }
+
   &__checkbox:checked + &__button:hover &__icon {
     transform: translateY(-.5rem);
   }
@@ -215,10 +215,8 @@
     transform: rotate(-135deg);
   }
 
-  &__checkbox:checked + &__button:hover &__icon::before,
-    &__checkbox:checked + &__button:hover &__icon::after  {
-    transform: rotate(0),
-               scale(1.2);
+  &__checkbox:checked + &__button:hover &__icon::after,
+  &__checkbox:checked + &__button:hover &__icon::before {
+    transform: rotate(0), scale(1.2);
   }
-
 }

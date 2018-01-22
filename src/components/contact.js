@@ -24,11 +24,11 @@ class Contact extends Component {
   render() {
     return (
       <section id="contact" className="contact">
-        {this.props.message &&
-          <h2 className="contact__email--message">{this.props.message}</h2>
-        }
         <div className="contact__form">
           <div className="form__group">
+            {this.props.message &&
+              <h2 className="contact__email--message">{this.props.message}</h2>
+            }
             <div className="heading--main form__heading">
               Let's chat.
             </div>
@@ -39,7 +39,7 @@ class Contact extends Component {
               <label htmlFor="subject" className="form__label">Subject</label>
               <textarea name="message" onChange={this.updateFormState} value={this.state.message} id="" cols="30" rows="10" className="form__message form__input" required="required" placeholder="Message"></textarea>
               <button type="submit" className="form__button">
-                Send
+                Send Message
                 <span>
                   <svg className="form__icon--send">
                     <use xlinkHref={this.props.sendLogo} ></use>

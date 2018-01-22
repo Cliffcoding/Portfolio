@@ -17,7 +17,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.handleEmail = this.handleEmail.bind(this);
-    this.state = {}
+    this.state = {
+    }
   }
   componentDidMount() {
     new WOW().init();
@@ -44,6 +45,7 @@ class App extends Component {
           <div className="projects__box">
             {ProjectData.map((project) => {
               return(<Project
+                key={project.name}
                 name={project.name}
                 projectDescription= {project.description}
                 projectLink={project.link}

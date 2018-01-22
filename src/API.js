@@ -1,5 +1,5 @@
 import axios from 'axios';
-const POST_URL = 'http://localhost:3000/email';
+const POST_URL = 'https://jason-portfolio-server.herokuapp.com/email';
 
 export const sendEmail = (data) => {
   console.log(data);

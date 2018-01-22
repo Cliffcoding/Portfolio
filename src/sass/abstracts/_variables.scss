@@ -7,14 +7,22 @@ $color-terinary: rgba(34, 32, 34, 1);
 $color-black: #000;
 $color-white:#fff;
 
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
 $color1: rgba(239, 237, 239, 1);
 $color2: rgba(206, 204, 206, 1);
 $color3: rgba(110, 173, 58, 1);
 $color4: rgba(76, 73, 71, 1);
 $color5: rgba(34, 32, 34, 1);
 
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #f0eeee;
+$color-grey-light-4: #ccc;
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
@@ -27,10 +35,7 @@ $width-project: calc(100vw - 8rem);
   --color-primary-light: #FF3366;
   --color-primary-dark: #BA265D;
 
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
-  --color-grey-light-3: #f0eeee;
-  --color-grey-light-4: #ccc;
+
 
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
