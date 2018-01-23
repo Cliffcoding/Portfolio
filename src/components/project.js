@@ -8,7 +8,6 @@ class Project extends Component {
     }
   }
   handleClick(e) {
-    e.preventDefault;
     !this.state.active
       ? this.setState({active: true})
       : this.setState({active: false})

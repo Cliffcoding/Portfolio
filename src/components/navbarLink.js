@@ -5,7 +5,6 @@ class NavBarLink extends Component {
     this.handleClick.bind(this);
   }
   handleClick(e) {
-    e.preventDefault;
     document.getElementById("navi-toggle").checked = false;
 
   }

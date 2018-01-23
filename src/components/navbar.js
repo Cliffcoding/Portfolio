@@ -8,10 +8,6 @@ import socialSvg from '../images/sprite.svg';
 
 
 class NavBar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render () {
     return (
       <div>

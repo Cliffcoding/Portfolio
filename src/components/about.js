@@ -10,7 +10,7 @@ const About = () => {
           <span className="heading--dash"></span>
         </div>
         <p className="about__paragraph ">
-          Buidling things one div at a time, I'm a Web Developer eager to take on new and exciting projects. Currently diving into the full stack with node and JavaScript. 
+          Building things one div at a time, I'm a Web Developer eager to take on new and exciting projects. Currently diving into the full stack with node and JavaScript. 
         </p>
       </div>
     </section>
