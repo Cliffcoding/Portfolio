@@ -1,17 +1,22 @@
 .about {
   grid-column: center-start/center-end;
   min-height: 90vh;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   position: relative;
   z-index: -1;
+  @media only screen and (max-width: $bp-medium) {
+    min-height: 60vh;
+  }
+
   &__container{
     margin-top: 8vw;
     font-size: 4rem;
     font-weight: 500;
-
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1;
+    }
   }
   &__heading{
     margin-bottom: 6rem;
