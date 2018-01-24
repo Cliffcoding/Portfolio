@@ -31,14 +31,14 @@ $color-grey-dark-4:  #626262;
 
 
 $width-project: calc(100vw - 8rem);
-@media only screen and (max-width: $bp-large) {
-  $width-project: 100vw;
-}
 
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; //800px
 $bp-small: 37.5em; //600px
+@media only screen and (max-width: $bp-large) {
+  $width-project: 100vw;
+}
 :root {
   --color-primary: rgba(4, 247, 153, 1);
   --color-primary-light: #FF3366;

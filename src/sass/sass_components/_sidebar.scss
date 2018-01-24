@@ -35,6 +35,7 @@
     justify-content: space-between;
     position: fixed;
     align-items: center;
+
     box-shadow: 0.5rem 0 1rem rgba($color-grey-dark,.5);
     @media only screen and (max-width: $bp-large) {
       width: 100vw;
@@ -47,9 +48,12 @@
   }
 
   &__social {
-    // display: flex;
-    // flex-direction: column;
     @media only screen and (max-width: $bp-large) {
+      display: flex;
+      -webkit-flex-flow: column nowrap;
+      -moz-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
     }
   }
 }
@@ -143,9 +147,12 @@
 
   &__checkbox:checked ~ &__nav {
     opacity: 1;
-    margin-left: 8rem;
+    // margin-left: 8rem;
     width: $width-project;
     z-index: 6000;
+    @media only screen and (max-width: $bp-large) {
+      width: 100vw;
+    }
   }
 
   &__button {
