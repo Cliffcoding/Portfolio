@@ -330,7 +330,6 @@ body {
       border-top: 1px solid transparent; }
   .project__checkbox:checked + .project__button {
     position: absolute;
-    z-index: 5600;
     cursor: pointer;
     background-color: #04f799;
     border-radius: 50%;
@@ -339,7 +338,8 @@ body {
     top: 2rem;
     right: 2rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-    text-align: center; }
+    text-align: center;
+    z-index: 5600; }
   .project__checkbox:checked + .project__button:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3); }
