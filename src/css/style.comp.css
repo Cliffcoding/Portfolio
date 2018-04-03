@@ -200,7 +200,6 @@ body {
     width: 20rem; }
 
 .header {
-  backface-visibility: hidden;
   grid-column: full-start/full-end;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coffee-computer.jpg") no-repeat center center fixed;
@@ -294,7 +293,7 @@ body {
     background-color: #fff;
     cursor: pointer;
     width: calc(100vw - 8rem);
-    transition: all .5s; }
+    transition: all 0.5s; }
   .project__checkbox {
     display: none; }
   .project__button {
@@ -305,7 +304,7 @@ body {
     overflow: hidden;
     backface-visibility: hidden;
     z-index: 5100;
-    transition: transform .2s, box-shadow .2s; }
+    transition: transform 0.2s, box-shadow 0.2s; }
     .project__button::before {
       overflow: hidden;
       content: "";
@@ -331,7 +330,6 @@ body {
       border-top: 1px solid transparent; }
   .project__checkbox:checked + .project__button {
     position: absolute;
-    z-index: 5600;
     cursor: pointer;
     background-color: #04f799;
     border-radius: 50%;
@@ -427,6 +425,51 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.5s; }
+  @media only screen and (max-width: 62.5em) {
+    .project__container {
+      height: 70vh;
+      -webkit-background-size: cover;
+      z-index: 5501;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      display: grid;
+      justify-items: center;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      cursor: default;
+      box-shadow: 0.5rem 1rem 1rem rgba(119, 119, 119, 0.5); }
+    .project__checkbox:checked ~ .project__container {
+      height: 100vh; }
+    .project__container .project__link:link,
+    .project__container .project__link:visited {
+      font-size: 10rem;
+      font-family: 'Third Rail', sans-serif;
+      padding: 0;
+      color: #04f799;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s;
+      margin: 0; }
+    .project__button {
+      position: absolute;
+      z-index: 5600;
+      cursor: pointer;
+      background-color: #04f799;
+      border-radius: 20%;
+      height: 6rem;
+      width: 3rem;
+      bottom: 6rem;
+      left: calc(50vw - 3rem);
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+      transition: all 2s;
+      text-align: center; }
+      .project__button::before {
+        display: none; }
+    .project__checkbox:checked + .project__button {
+      transform: translateY(3rem);
+      opacity: 0; } }
 
 .description {
   color: #fff;
@@ -481,6 +524,13 @@ body {
         -moz-flex-flow: row nowrap;
         -ms-flex-flow: row nowrap;
         flex-flow: row nowrap; } }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar__social {
+      display: flex;
+      -webkit-flex-flow: column nowrap;
+      -moz-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap; } }
 
 .navigation {
   position: relative; }
@@ -548,9 +598,11 @@ body {
         width: 100vw; } }
   .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
-    margin-left: 8rem;
     width: calc(100vw - 8rem);
     z-index: 6000; }
+    @media only screen and (max-width: 62.5em) {
+      .navigation__checkbox:checked ~ .navigation__nav {
+        width: 100vw; } }
   .navigation__button {
     background-color: #fff;
     height: 8rem;

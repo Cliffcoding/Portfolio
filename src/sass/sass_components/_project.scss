@@ -24,7 +24,7 @@
     width: 100%;
     overflow: hidden;
     backface-visibility: hidden;
-    z-index: 5100;
+    z-index: 5500;
     transition: transform 0.2s, box-shadow 0.2s;
 
     &::before {
@@ -66,7 +66,7 @@
 
   &__checkbox:checked + &__button {
     position: absolute;
-    // z-index: 5600;
+    z-index: 5600;
     cursor: pointer;
     background-color: $color-primary;
     border-radius: 50%;
@@ -153,7 +153,7 @@
   }
 
   &--1 {
-    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/macro-man.jpg") no-repeat center;
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("http://res.cloudinary.com/jcliff1473/image/upload/c_scale,w_1384/v1516764733/portfolio/macro-man_zcbzz3.jpg") no-repeat center;
     @include projectImageLayout;
   }
 
@@ -180,7 +180,7 @@
     position: relative;
     font-size: 1.4rem;
     color: #333;
-    z-index: 5200;
+    z-index: 5505;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.5s;

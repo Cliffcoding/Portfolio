@@ -202,7 +202,7 @@ body {
 .header {
   grid-column: full-start/full-end;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coffee-computer.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://res.cloudinary.com/jcliff1473/image/upload/c_scale,w_824/v1516764680/portfolio/coffee-computer_ztgwip.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -303,7 +303,7 @@ body {
     width: 100%;
     overflow: hidden;
     backface-visibility: hidden;
-    z-index: 5100;
+    z-index: 5500;
     transition: transform 0.2s, box-shadow 0.2s; }
     .project__button::before {
       overflow: hidden;
@@ -330,6 +330,7 @@ body {
       border-top: 1px solid transparent; }
   .project__checkbox:checked + .project__button {
     position: absolute;
+    z-index: 5600;
     cursor: pointer;
     background-color: #04f799;
     border-radius: 50%;
@@ -391,7 +392,7 @@ body {
   .project__heading {
     grid-column: center-start/center-end; }
   .project--1 {
-    background: linear-gradient(rgba(34, 32, 34, 0.8), rgba(34, 32, 34, 0.8)), url("../images/macro-man.jpg") no-repeat center;
+    background: linear-gradient(rgba(34, 32, 34, 0.8), rgba(34, 32, 34, 0.8)), url("http://res.cloudinary.com/jcliff1473/image/upload/c_scale,w_1384/v1516764733/portfolio/macro-man_zcbzz3.jpg") no-repeat center;
     width: 100%;
     object-fit: cover;
     background-size: 100%;
@@ -421,7 +422,7 @@ body {
     position: relative;
     font-size: 1.4rem;
     color: #333;
-    z-index: 5200;
+    z-index: 5505;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.5s; }
