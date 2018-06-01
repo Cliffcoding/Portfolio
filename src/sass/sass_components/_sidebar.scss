@@ -92,6 +92,10 @@
     width: 0;
     transition: all 0.4s cubic-bezier(0.68, 0.55, 0.265, 1.55);
     backface-visibility: hidden;
+    margin-left: 8rem;
+    @media only screen and (max-width: $bp-large) {
+      margin-left: 0;
+    }
   }
 
   &__list {

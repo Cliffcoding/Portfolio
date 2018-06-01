@@ -56,8 +56,8 @@ class App extends Component {
             })}
           </div>
         </section>
-        <section id="resume" className="resume">
-          <div className="resume__heading heading--main">
+        <section  className="resume">
+          <div id="resume" className="resume__heading heading--main">
             Resume
             <span className="heading--dash"></span>
           </div>
