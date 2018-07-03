@@ -71,7 +71,7 @@ body {
 
 .about {
   grid-column: center-start/center-end;
-  min-height: 90vh;
+  min-height: 70vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -81,7 +81,7 @@ body {
     .about {
       min-height: 60vh; } }
   .about__container {
-    margin-top: 8vw;
+    margin-top: 8rem;
     font-size: 4rem;
     font-weight: 500; }
     @media only screen and (max-width: 50em) {
@@ -202,7 +202,7 @@ body {
 .header {
   grid-column: full-start/full-end;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://res.cloudinary.com/jcliff1473/image/upload/c_scale,w_824/v1516764680/portfolio/coffee-computer_ztgwip.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/jcliff1473/image/upload/v1516764680/portfolio/coffee-computer_ztgwip.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -227,7 +227,7 @@ body {
     grid-column: full-start/full-end; }
 
 .resume {
-  padding: 8rem 0;
+  margin: 8rem 0;
   position: relative;
   z-index: 1000;
   border-bottom: 1px solid #f1f1f1;
@@ -261,6 +261,18 @@ body {
     transform: translateY(-0.5rem);
     -webkit-filter: drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.5));
     filter: drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.5)); }
+
+@media only screen and (max-width: 62.5em) {
+  .social__list {
+    display: flex;
+    margin: 2rem 1rem; }
+  .social__item {
+    list-style: none;
+    padding: 0 1rem; }
+  .social__icon {
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.2s; } }
 
 .container {
   display: grid; }
@@ -320,7 +332,8 @@ body {
       box-shadow: 0.5rem 0.5rem 4rem rgba(119, 119, 119, 0.5); }
     .project__button:hover::before {
       overflow: hidden;
-      transform: translateX(100%); }
+      transform: translateX(100%);
+      width: calc(100vw - 8rem); }
     .project__button:hover + .project__container .project__link {
       color: #fff;
       margin-left: 25vh; }
@@ -390,9 +403,10 @@ body {
     transition: all 0.5s;
     margin: 0; }
   .project__heading {
-    grid-column: center-start/center-end; }
+    grid-column: center-start/center-end;
+    margin-bottom: 6rem; }
   .project--1 {
-    background: linear-gradient(rgba(34, 32, 34, 0.8), rgba(34, 32, 34, 0.8)), url("http://res.cloudinary.com/jcliff1473/image/upload/c_scale,w_1384/v1516764733/portfolio/macro-man_zcbzz3.jpg") no-repeat center;
+    background: linear-gradient(rgba(34, 32, 34, 0.8), rgba(34, 32, 34, 0.8)), url("https://res.cloudinary.com/jcliff1473/image/upload/c_scale,w_1384/v1516764733/portfolio/macro-man_zcbzz3.jpg") no-repeat center;
     width: 100%;
     object-fit: cover;
     background-size: 100%;
@@ -441,8 +455,6 @@ body {
       text-align: center;
       cursor: default;
       box-shadow: 0.5rem 1rem 1rem rgba(119, 119, 119, 0.5); }
-    .project__checkbox:checked ~ .project__container {
-      height: 100vh; }
     .project__container .project__link:link,
     .project__container .project__link:visited {
       font-size: 10rem;
@@ -459,18 +471,29 @@ body {
       cursor: pointer;
       background-color: #04f799;
       border-radius: 20%;
-      height: 6rem;
-      width: 3rem;
+      height: 8rem;
+      width: 4rem;
       bottom: 6rem;
-      left: calc(50vw - 3rem);
+      left: calc(50vw - 2rem);
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-      transition: all 2s;
+      transition: transform 2s;
       text-align: center; }
+      .project__button:not(:last-child) {
+        border-top: 0; }
+      .project__button:hover:not(:last-child) {
+        border-top: 0; }
       .project__button::before {
         display: none; }
+      .project__button:hover {
+        transform: translateY(8%);
+        z-index: 5600; }
+      .project__button:hover + .project__container .project__link {
+        color: #04f799;
+        margin-left: 0; }
     .project__checkbox:checked + .project__button {
-      transform: translateY(3rem);
-      opacity: 0; } }
+      transform: translateY(10%);
+      top: 4rem;
+      left: 90vw; } }
 
 .description {
   color: #fff;
@@ -525,13 +548,6 @@ body {
         -moz-flex-flow: row nowrap;
         -ms-flex-flow: row nowrap;
         flex-flow: row nowrap; } }
-  @media only screen and (max-width: 62.5em) {
-    .sidebar__social {
-      display: flex;
-      -webkit-flex-flow: column nowrap;
-      -moz-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap; } }
 
 .navigation {
   position: relative; }
