@@ -1,11 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+
 class NavBarLink extends Component {
   constructor(props) {
     super(props);
     this.handleClick.bind(this);
   }
-  handleClick(e) {
-    document.getElementById("navi-toggle").checked = false;
+  handleClick() {
+    document.getElementById('navi-toggle').checked = false;
 
   }
   render() {

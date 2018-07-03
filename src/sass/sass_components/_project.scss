@@ -47,7 +47,7 @@
     &:hover::before {
       overflow: hidden;
       transform: translateX(100%);
-      // width: $width-project;
+      width: $width-project;
     }
 
     &:hover + .project__container .project__link {
@@ -150,6 +150,7 @@
 
   &__heading {
     grid-column: center-start/center-end;
+    margin-bottom: 6rem;
   }
 
   &--1 {
@@ -201,9 +202,7 @@
       cursor: default;
       box-shadow: 0.5rem 1rem 1rem rgba($color-grey-dark, .5);
     }
-    &__checkbox:checked ~ &__container {
-      height: 100vh;
-    }
+
     &__container &__link:link,
     &__container &__link:visited {
       font-size: 10rem;
@@ -215,26 +214,48 @@
       transition: all 0.5s;
       margin: 0;
     }
-    &__button{
+    &__button {
       position: absolute;
       z-index: 5600;
       cursor: pointer;
       background-color: $color-primary;
       border-radius: 20%;
-      height: 6rem;
-      width: 3rem;
+      height: 8rem;
+      width: 4rem;
       bottom: 6rem;
-      left: calc(50vw - 3rem);
+      left: calc(50vw - 2rem);
       box-shadow: 0 1rem 3rem rgba($color-black, .3);
-      transition: all 2s;
+      transition: transform 2s;
       text-align: center;
-      &::before{
+      &:not(:last-child) {
+        border-top: 0;
+      }
+  
+      &:hover:not(:last-child) {
+        border-top: 0;
+      }
+
+      &::before {
         display: none;
+      }
+      &:hover{
+        transform: translateY(8%);
+        z-index: 5600;
+      }
+      // &:hover::before {
+      //   overflow: hidden;
+      //   transform: translatey(5%);
+      //   width: $width-project;
+      // }
+      &:hover + .project__container .project__link {
+        color: $color-primary;
+        margin-left: 0;
       }
     }
     &__checkbox:checked + &__button {
-      transform: translateY(3rem);
-      opacity: 0;
+      transform: translateY(10%);
+      top: 4rem;
+      left: 90vw;
     }
   }
 }
