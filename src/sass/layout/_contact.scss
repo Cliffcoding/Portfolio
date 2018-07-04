@@ -15,13 +15,13 @@
     width: 70%;
     justify-self: center;
     align-self: center;
-    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%),url("../images/contact.jpg");
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%),url("https://res.cloudinary.com/jcliff1473/image/upload/v1516764704/portfolio/contact_xd9cum.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
     @media only screen and (max-width: $bp-largest) {
-      background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url("../images/contact.jpg");
+      background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url("https://res.cloudinary.com/jcliff1473/image/upload/v1516764704/portfolio/contact_xd9cum.jpg");
     }
   }
 }
@@ -46,7 +46,6 @@
     color: inherit;
     padding: 1.5rem 2rem;
     border-radius: 2px;
-    // background-color: rgba($color-grey-light-1, 1);
     border: none;
     border-bottom: 3px solid transparent;
     width: 100%;

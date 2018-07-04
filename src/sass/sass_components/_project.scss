@@ -159,18 +159,18 @@
   }
 
   &--2 {
-    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/jello.jpg") no-repeat center;
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("https://res.cloudinary.com/jcliff1473/image/upload/v1516764729/portfolio/jello_ba7b81.jpg") no-repeat center;
     @include projectImageLayout;
   }
 
   &--3 {
-    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/taparoo.jpg") no-repeat center;
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("https://res.cloudinary.com/jcliff1473/image/upload/v1516764710/portfolio/taparoo_nnmjot.jpg") no-repeat center;
     @include projectImageLayout;
     background-position: 100% 60%;
   }
 
   &--4 {
-    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("../images/mirror-mirror.jpg") no-repeat center;
+    background: linear-gradient(rgba($color-terinary, 0.8), rgba($color-terinary, 0.8)), url("https://res.cloudinary.com/jcliff1473/image/upload/v1530665588/portfolio/mirror-mirror.jpg") no-repeat center;
     @include projectImageLayout;
     background-position: 100% 40%;
   }
@@ -242,11 +242,6 @@
         transform: translateY(8%);
         z-index: 5600;
       }
-      // &:hover::before {
-      //   overflow: hidden;
-      //   transform: translatey(5%);
-      //   width: $width-project;
-      // }
       &:hover + .project__container .project__link {
         color: $color-primary;
         margin-left: 0;
