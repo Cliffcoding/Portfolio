@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import NavBarLink from './navbarLink';
 import LinkSocial from './linkSocial';
-
-import videoMp4 from '../images/busy-people.mp4';
-import videoWebm from '../images/busy-people.webm';
 import socialSvg from '../images/sprite.svg';
 
 
@@ -33,8 +30,8 @@ class NavBar extends Component {
           <div className="navigation__background">
             <div className="bg-video">
               <video className="bg-video__content" autoPlay="autoplay" muted="muted" loop="loop">
-                <source src={videoMp4} type="video/mp4"/>
-                <source src={videoWebm} type="video/webm"/>
+                <source src="https://res.cloudinary.com/jcliff1473/video/upload/v1530666784/busy-people_tuig9v.mp4" type="video/mp4"/>
+                <source src="https://res.cloudinary.com/jcliff1473/video/upload/v1530666804/busy-people_rvgut9.webm" type="video/webm"/>
                 Your browser is not supported!
               </video>
             </div>
